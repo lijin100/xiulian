@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作修炼</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="zen-background"></div>
+    <div class="container">
+        <div class="header-section">
+            <h1>工作修炼</h1>
+            <p class="zen-quote">只做最重要最核心最关键的事</p>
+            <p class="zen-subquote">小区块 · 小快感 · 小当下 · 小奖励</p>
+        </div>
+        
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="输入新任务...">
+            <input type="number" id="timeInput" placeholder="预计时间(分钟)" min="1">
+            <button onclick="addTask()">添加任务</button>
+        </div>
+
+        <div class="task-list" id="taskList">
+            <!-- 任务将在这里动态添加 -->
+        </div>
+
+        <div class="summary">
+            <p>今日累计工作时间：<span id="totalTime">0</span> 分钟</p>
+        </div>
+
+        <div class="reward-section">
+            <div class="wheel" id="wheel">
+                <div class="wheel-inner">
+                    <!-- 奖励选项将在这里动态添加 -->
+                </div>
+                <div class="wheel-pointer" id="wheelPointer"></div>
+                <button class="wheel-center" id="spinButton" disabled>
+                    转动
+                </button>
+            </div>
+        </div>
+
+        <div class="achievement-tree">
+            <h2>今日成果树</h2>
+            <div class="tree-container" id="achievementTree">
+                <div class="tree-root">今日完成</div>
+                <div class="tree-branches" id="treeBranches"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <audio id="tickSound" preload="auto">
+        <source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAASAAACAwEGBggKDA4QEhQWGBocHiAiJCYoKiwuMDI0Njg6PD5AQUNFR0lLTE5QUlRWWFpcXmBiZGZoamxtb3Fzc3V3eXt9f4GDhYeJi42PkZOVl5mbnZ+ho6Wlp6mqrK6wsrS2uLq8vsDBw8XHycvNz9HT1dfa3N7g4uTm6Ors7vDy9Pb4+vz+/wAAAA5MQVZGNTguNzYuMTAwAAAAAAAAAAAAAAD/+1DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7UMQAABJxTCQAAABMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" type="audio/mpeg">
+    </audio>
+</body>
+</html> 
